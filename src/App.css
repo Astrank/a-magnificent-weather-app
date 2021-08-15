@@ -3,9 +3,24 @@
     min-height: 100vh;
     font-family: Roboto, sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1,
 p {
     margin: 0;
+}
+
+.current-weather {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.current-weather .temp {
+    font-size: 2em;
 }

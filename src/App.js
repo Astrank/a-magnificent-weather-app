@@ -13,7 +13,7 @@ function App() {
     });
 
   const getUserData = async () => await axios
-    .get('https://geolocation-db.com/json')
+    .get('https://api.ipify.org/?format=json')
     .then(res => console.log(res));
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <div className="current-weather">
         <h1 className="city">{weather != null ? weather.name : "Ciudad"}</h1>
-        <h1 className="temp">{weather != null ? weather.main.temp + " ºC" : "ºC"}</h1>
+        <h1 className="temp">{weather != null ? Math.round(weather.main.temp * 10) / 10 + " ºC" : "ºC"}</h1>
       </div>
     </div>
   );
