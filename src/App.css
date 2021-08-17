@@ -14,13 +14,70 @@ p {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+/* Search field */
+
+.search-field {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 1.2em;
+    font-size: 1.2em;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-results {
+    display: flex;
+    width: 100%;
+    max-width: 425px;
+    background-color: #fff;
+    color: rgb(51, 51, 51);
+    position: absolute;
+    flex-direction: column;
+    top: 2.7em;
+}
+
+.search-result {
+    padding: 0.5em;
+}
+
+.search-result:hover,
+.search-result label:hover {
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+}
+
+/* Current weather */
+
 .current-weather {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1em;
+    margin: auto;
+    height: 100%;
 }
 
 .current-weather .temp {
     font-size: 2em;
+}
+
+.hidden {
+    display: none;
 }
