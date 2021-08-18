@@ -2,13 +2,12 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 1em 0;
+  width: 450px;
+  margin: 2.5em 0;
 }
 
 .search-input {
   width: 100%;
-  max-width: 400px;
   height: 45px;
   border: none;
   border-radius: 5px;
@@ -23,7 +22,6 @@
 .search-results {
   display: flex;
   width: 100%;
-  max-width: 425px;
   background-color: #fff;
   color: rgb(51, 51, 51);
   position: absolute;

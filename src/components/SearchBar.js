@@ -28,12 +28,14 @@ const SearchBar = (props) => {
             firstRender.current = false;
             return;
         }
+
         const timeoutId = setTimeout(() => {
             props.clearGeocodingData();
             if(value !== ''){
                 props.geocoding(value);
             }
         }, 1000);
+        
         return () => clearTimeout(timeoutId);
     }, [value]);
 
@@ -48,7 +50,7 @@ const SearchBar = (props) => {
             <div className={searchResultsClass}>
                 {props.geocodingData.map((data, index) => 
                     <div key={index} className="search-result" 
-                        onClick={() => props.requestWeather(data)}>{data.name}, {data.country}</div>)}
+                        onClick={() => props.newLocation(data)}>{data.name}, {data.country}</div>)}
             </div>
         </div>
     )

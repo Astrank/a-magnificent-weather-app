@@ -1,12 +1,12 @@
 .App {
-    background-color: rgb(52, 87, 133);
+    background: linear-gradient(180deg, rgb(49, 82, 124), rgb(69, 113, 170) 100.00%);
     min-height: 100vh;
     font-family: Roboto, sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    min-width: 850px;
 }
 
 h1,
@@ -18,16 +18,49 @@ p {
     display: none;
 }
 
+.weather {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7em;
+}
+
 .current-weather {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin: auto;
-    height: 100%;
 }
 
 .current-weather .temp {
     font-size: 2em;
 }
 
+.daily-weather {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.day-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.day-weather .date {
+    margin-bottom: 1em;
+}
+
+.daily-minmax {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center; 
+}
+
+.max {
+    font-size: 2em;
+}
