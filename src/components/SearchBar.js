@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import './SearchBar.css';
 import { useEffect, useState, useRef } from 'react';
 
