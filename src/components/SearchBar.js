@@ -47,7 +47,7 @@ const SearchBar = (props) => {
             if(value !== ''){
                 geocoding(value);
             }
-        }, 1000);
+        }, 600);
         
         return () => clearTimeout(timeoutId);
     }, [value]);
@@ -59,7 +59,7 @@ const SearchBar = (props) => {
             <div className="search-bar">
                 <input className="search-input" 
                         onFocus={showSearchResults} 
-                        onBlur={hideSearchResults}  
+                        onBlur={hideSearchResults} 
                         type="text" 
                         placeholder="Enter a city..." 
                         onChange={handleInputChange}/>
