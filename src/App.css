@@ -25,6 +25,7 @@ a {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    font-weight: 400;
 }
 
 .hidden {
@@ -41,14 +42,42 @@ a {
 .current-weather {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    flex-direction: row;
+    gap: 9em;
     margin: auto;
     animation: slideUp 0.4s ease;
 }
 
-.current-weather .temp {
+.current-weather__main .cur-location {
+    margin-bottom: 0.5em;
+    font-weight: 400;
     font-size: 2em;
+}
+
+.current-weather__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8em;
+}
+
+.current-weather__data .weather-description {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.weather-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.current-weather .temp {
+    font-size: 3.2em;
+    font-weight: 400;
 }
 
 .daily-weather {
@@ -87,6 +116,11 @@ a {
 
     .current-weather .temp {
       font-size: 1.8em;
+    }
+
+    .current-weather {
+        flex-direction: column;
+        gap: 3em;
     }
 }
 
