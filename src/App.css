@@ -1,17 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .App {
     background: linear-gradient(180deg, rgb(49, 82, 124), rgb(69, 113, 170) 100.00%);
-    height: 100vh;
-    font-family: Roboto, sans-serif;
+    min-height: -webkit-fill-available;
+    font-family: Segoe UI, sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 850px;
-}
-
-h1,
-p {
-    margin: 0;
+    min-height: 100vh;
 }
 
 .hidden {
@@ -19,10 +32,10 @@ p {
 }
 
 .weather {
-    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 7em;
+    gap: 6em;
+    margin-top: 3em;
 }
 
 .current-weather {
@@ -67,6 +80,16 @@ p {
     font-size: 2em;
 }
 
+@media (max-width: 29em) {
+    .cur-location {
+      font-size: 1.6em;
+    }
+
+    .current-weather .temp {
+      font-size: 1.8em;
+    }
+}
+
 @keyframes slideUp {
     0% {
         transform: skewY(5deg) translateY(70px)
@@ -88,6 +111,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 .lds-roller {
