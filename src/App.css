@@ -85,6 +85,32 @@ a {
     flex-direction: row;
     gap: 4em;
     animation: slideUpMore 0.6s ease;
+    max-width: 60em;
+    margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+    .daily-weather{
+        max-width: 45em;
+    }
+}
+
+@media (max-width: 800px) {
+    .daily-weather{
+        max-width: 35em;
+    }
+}
+
+@media (max-width: 600px) {
+    .daily-weather{
+        max-width: 25em;
+    }
+}
+
+@media (max-width: 450px) {
+    .daily-weather{
+        max-width: 16em;
+    }
 }
 
 .day-weather {
@@ -101,8 +127,9 @@ a {
 .daily-minmax {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 0.8em;
     align-items: center; 
+    justify-content: center;
 }
 
 .max {

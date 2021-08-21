@@ -4,9 +4,13 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
+import Carousel from "./components/Carousel";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-  const days = ["sun.", "mon.", "tue.", "wed.", "thu.", "fri.", "sat."];
 
   const [curLocation, setCurrentLocation] = useState({
     country: "AR",
@@ -109,31 +113,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="daily-weather">
-            {weatherData.daily.map((day, index) => (
-              <div className="day-weather" key={index}>
-                <div className="date">{`${
-                  days[
-                    new Date(
-                      new Date().setDate(new Date().getDate() + index)
-                    ).getDay()
-                  ]
-                } ${new Date(
-                  new Date().setDate(new Date().getDate() + index)
-                ).getDate()}`}</div>
-                <div className="weather-icon">
-                  <img
-                    src={`http://openweathermap.org/img/w/${day.weather[0].icon}.png`}
-                    alt={day.weather[0].main}
-                    title={day.weather[0].main}
-                  />
-                </div>
-                <div className="daily-minmax">
-                  <div className="max">{Math.round(day.temp.max)}</div>
-                  <div className="min">{Math.round(day.temp.min)}</div>
-                </div>
-              </div>
-            ))}
+          <div style={{minWidth: 60+'em'}}>
+            <Carousel data={weatherData.daily} /> 
           </div>
         </div>
       )}
