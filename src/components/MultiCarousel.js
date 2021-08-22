@@ -27,11 +27,11 @@ const MultiCarousel = (props) => {
   };
 
   const CustomRightArrow = ({ onClick }) => {
-    return <i onClick={() => onClick()} class="fas fa-chevron-right right-arrow"></i>
+    return <i onClick={() => onClick()} className="fas fa-chevron-right right-arrow"></i>
   };
 
   const CustomLeftArrow = ({ onClick }) => (
-    <i onClick={() => onClick()} class="fas fa-chevron-left left-arrow"></i>
+    <i onClick={() => onClick()} className="fas fa-chevron-left left-arrow"></i>
   );
 
   return(
