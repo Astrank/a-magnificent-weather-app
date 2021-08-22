@@ -4,11 +4,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
-import Carousel from "./components/Carousel";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import MultiCarousel from "./components/MultiCarousel";
 
 function App() {
 
@@ -114,7 +110,7 @@ function App() {
             </div>
           </div>
           <div style={{minWidth: 60+'em'}}>
-            <Carousel data={weatherData.daily} /> 
+            <MultiCarousel data={weatherData.daily} /> 
           </div>
         </div>
       )}

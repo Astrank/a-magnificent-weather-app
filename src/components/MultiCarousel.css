@@ -1,0 +1,13 @@
+.right-arrow,
+.left-arrow {
+    font-size: 1.8em;
+}
+
+.right-arrow {
+    position: absolute;
+    left: 95%;
+}
+
+.left-arrow {
+    position: absolute;
+}

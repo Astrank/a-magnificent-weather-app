@@ -26,6 +26,7 @@ a {
     align-items: center;
     min-height: 100vh;
     font-weight: 400;
+    overflow: hidden;
 }
 
 .hidden {
@@ -107,9 +108,9 @@ a {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 464px) {
     .daily-weather{
-        max-width: 16em;
+        max-width: 20em;
     }
 }
 
